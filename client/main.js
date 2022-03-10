@@ -1,5 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-import HelloWorld from './HelloWorld'
+import Layout from './components/layout';
 
-render(<HelloWorld />, document.getElementById('root'))
+render(<Layout />, document.getElementById('root'))

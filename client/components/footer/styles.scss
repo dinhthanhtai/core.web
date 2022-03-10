@@ -1,0 +1,144 @@
+footer {
+  .social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgb(219, 213, 213);
+    border-bottom: 1px solid rgb(219, 213, 213);
+    margin-bottom: 1rem;
+    padding: 1rem 0rem;
+    @media screen and (min-width: 320px) {
+      flex-direction: column;
+    }
+    @media screen and (min-width: 480px) {
+    }
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      padding: 1rem 3rem;
+    }
+    @media screen and (min-width: 1024px) {
+      padding: 1rem 6rem;
+    }
+
+    &_logo {
+      margin-bottom: 1.5rem;
+    }
+
+    &_icons {
+      display: flex;
+    }
+
+    &_icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      width: 3.5rem;
+      height: 3.5rem;
+      border: 1px solid gray;
+      border-radius: 50%;
+
+      @media screen and (min-width: 768px) {
+        font-size: 1.2rem;
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    &_icon:not(:last-child) {
+      margin-right: 1.5rem;
+
+      @media screen and (min-width: 480px) {
+        margin-right: 2.5rem;
+      }
+    }
+  }
+  .explore {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media only screen and (min-width: 320px) {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+    }
+
+    @media screen and (min-width: 480px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-left: 5rem;
+    }
+
+    &_nav {
+      @media only screen and (min-width: 320px) {
+        margin: 1rem 0;
+        font-size: 1.1rem;
+      }
+
+      @media screen and (min-width: 768px) {
+        font-size: 1.2rem;
+        margin: 1rem 2rem;
+      }
+
+      @media screen and (min-width: 1024px) {
+        font-size: 1.6rem;
+      }
+
+      &-item {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        @media only screen and (min-width: 320px) {
+          line-height: 2rem;
+        }
+
+        @media screen and (min-width: 1024px) {
+          line-height: 3rem;
+        }
+      }
+
+      &-link {
+        text-decoration: none;
+        color: black;
+      }
+
+      &-link:first-child {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .explain {
+    &_text {
+      width: 100%;
+      background: #8080801f;
+      color: gray;
+
+      /*Iphone(480 x 640)*/
+      @media only screen and (min-width: 320px) {
+        font-size: 0.8rem;
+        padding: 1rem 1rem;
+      }
+
+      /*Tablet nhỏ(480 x 640)*/
+      @media screen and (min-width: 480px) {
+        font-size: 0.9rem;
+      }
+      /*Ipad dọc(768 x 1024)*/
+      @media screen and (min-width: 768px) {
+        font-size: 1.2rem;
+        padding: 2rem 3rem;
+      }
+      /*Ipad ngang(1024 x 768)*/
+      @media screen and (min-width: 1024px) {
+        font-size: 1.6rem;
+        padding: 2rem 6rem;
+      }
+    }
+  }
+}

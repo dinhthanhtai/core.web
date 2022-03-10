@@ -1,0 +1,68 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+  &_left {
+    &-avatar {
+      border-radius: 50%;
+      width: 10rem;
+      height: 10rem;
+      background-color: red;
+    }
+    &-text {
+      text-transform: uppercase;
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+      color: gray;
+    }
+    &-name {
+      color: black;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    &-prize {
+      font-size: 1.8rem;
+      span {
+        color: rgb(26, 108, 231);
+      }
+    }
+    &-button {
+      &-donate {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        background-color: rgb(26, 108, 231);
+        color: white;
+        padding: 1rem 1.5rem;
+        border: 2px solid rgb(26, 108, 231);
+        font-weight: 400;
+        border-radius: 3px;
+      }
+      &-share {
+        padding: 1rem;
+        border-radius: 4px;
+        font-size: 2rem;
+        color: rgb(26, 108, 231);
+        border: 2px solid rgb(26, 108, 231);
+      }
+      &-option {
+      }
+    }
+    &-popup {
+      &-button {
+      }
+    }
+  }
+  &_right {
+    &-score {
+      &-up {
+        &-left {
+          &-price {
+          }
+        }
+        &-right {
+          &-price {
+          }
+        }
+      }
+    }
+  }
+}

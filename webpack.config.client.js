@@ -30,14 +30,6 @@ const config = {
             "sass-loader"
         ]
       },
-      {
-        "test": /\.scss$/,
-        "use": [
-            "style-loader",
-            "css-loader",
-            "sass-loader"
-        ]
-      }
     ]
   },
   plugins: [
@@ -46,7 +38,7 @@ const config = {
   ],
   resolve: {
     alias: {
-      'react-dom': '@hot-loader/react-dom'
+      'react-dom': '@hot-loader/react-dom',
     }
   }
 }
