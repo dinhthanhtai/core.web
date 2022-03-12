@@ -17,7 +17,7 @@ export const Footer = () => {
   return (
     <footer>
       <div className='social'>
-        <img src='' alt='loading....' className='social_logo' />
+        <img src='../../assets/shout-anz.svg' alt='loading....' className='social_logo' />
         <div className='social_icons'>
           <div className='social_icon'>
             <FaFacebookF />
@@ -42,8 +42,8 @@ export const Footer = () => {
             <ul key={index} className='explore_nav'>
               <li className='explore_nav-item'>
                 {
-                  items.map((value) => (
-                    <a key={value} href='#' className='explore_nav-link'>{value}</a>
+                  items.map((value, idx) => (
+                    <a key={idx} href='#' className='explore_nav-link'>{value}</a>
                   ))
                 }
               </li>

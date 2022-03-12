@@ -1,0 +1,31 @@
+.donation {
+  padding: 1rem;
+  overflow-x: hidden;
+
+  &-title {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: rgb(88, 86, 86);
+  }
+
+  &-board {
+    width: 90%;
+    border: 1px solid gray;
+    height: 10rem;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+
+    &-title {
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &-price {
+      color: blue;
+      font-weight: bold;
+    }
+  }
+}

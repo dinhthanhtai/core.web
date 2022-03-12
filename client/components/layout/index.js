@@ -3,6 +3,7 @@ import { hot } from 'react-hot-loader';
 import { Header } from '../header';
 import { Information } from '../Information';
 import { Donation } from '../donations';
+import { MainContent } from '../mainContent';
 import { Footer } from '../footer';
 
 import "./styles.scss";
@@ -13,7 +14,8 @@ const HelloWorld = () => {
       <Header />
       <main>
         <Information />
-        {/* <Donation /> */}
+        <Donation />
+        <MainContent />
       </main>
       <Footer />
     </div>

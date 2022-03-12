@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { FaShareAltSquare, FaEllipsisV } from 'react-icons/fa';
+import { FaShareAlt, FaEllipsisV } from 'react-icons/fa';
 
 import './styles.scss';
 
 export const Information = () => {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   return (
     <div className='info'>
@@ -17,32 +17,33 @@ export const Information = () => {
         </div>
         <div className='info_left-button'>
           <button className='info_left-button-donate'> donate to individual </button>
-          <button className='info_left-button-share'> 
-            <FaShareAltSquare />
+          <button className='info_left-button-square'> 
+            <FaShareAlt className='info_left-button-square-icon' />
           </button>
-          <button onClick={() => setVisible(!visible)} className='info_left-button-option'> 
-            <FaEllipsisV />
+          <button onClick={() => setVisible(!visible)} className='info_left-button-square'> 
+            <FaEllipsisV className='info_left-button-square-icon' />
+            {
+              visible && (
+                <ul className='info_left-popup'>
+                  <li className='info_left-popup-button'> Edit </li>
+                  <li className='info_left-popup-button'> Deactivate </li>
+                </ul>  
+              )
+            }
           </button>
         </div>
-        {
-          visible && (
-            <ul className='info_left-popup'>
-              <li className='info_left-popup-button'> Edit </li>
-              <li className='info_left-popup-button'> Deactivate </li>
-            </ul>  
-          )
-        }
+       
       </div>
       <div className='info_right'>
         <div className='info_right-score'>
           <div className='info_right-score-up'>
-            <div className='info_right-score-up-left'>
+            <div className='info_right-score-up-left info_right-score-up-text'>
               Total Raised 
               <div className='info_right-score-up-left-price'> $2.382.60 </div>
             </div>
-            <div className='info_right-score-up-right'>
+            <div className='info_right-score-up-right info_right-score-up-text'>
               My goal
-              <div className='info_right-score-up-right-price'> $2.382.60 </div>
+              <div className='info_right-score-up-right-price'> $5,000 </div>
             </div>
           </div>
           <div className='info_right-score-bottom'></div>

@@ -1,8 +1,10 @@
 .header {
   display: flex;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 99999;
 
   /*Iphone(480 x 640)*/
   @media screen and (min-width: 320px) {
@@ -44,7 +46,7 @@
     /*Iphone(480 x 640)*/
     @media screen and (min-width: 320px) {
       order: 3;
-      justify-content: end;
+      justify-content: center;
       height: 3rem;
     }
     /*Tablet nhỏ(480 x 640)*/

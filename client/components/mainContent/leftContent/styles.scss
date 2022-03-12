@@ -1,0 +1,78 @@
+.leftContent {
+  padding: 1rem;
+
+  // /*Iphone(480 x 640)*/
+  // @media only screen and (min-width: 320px) {
+  //   flex-direction: column;
+  //   margin: 2rem 1rem;
+  // }
+
+  // /*Tablet nhỏ(480 x 640)*/
+  // @media screen and (min-width: 480px) {
+  // }
+  /*Ipad dọc(768 x 1024)*/
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
+  /*Ipad ngang(1024 x 768)*/
+  @media screen and (min-width: 1024px) {
+    margin: 2rem 6rem;
+    flex-direction: row;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+  }
+  &__des {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    color: gray;
+  }
+  &__subTitle {
+    margin: 1.5rem 0 1rem 0;
+    color: rgb(102, 100, 100);
+  }
+  &__cards {
+    display: flex;
+
+    &-card {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+      width: 50%;
+      max-width: 17.5rem;
+      border: 1px solid #80808045;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+
+      img {
+        margin: 1.5rem 0 0.5rem 0;
+      }
+
+      &-kind {
+        font-size: 1.3rem;
+        color: gray;
+        font-weight: 500;
+        margin: 0.5rem 0;
+      }
+      &-name {
+        font-weight: bold;
+      }
+      &-amount {
+        margin: 1.5rem 0;
+        color: rgb(0, 119, 255);
+        font-weight: bold;
+      }
+      &-detail {
+        text-align: center;
+        color: gray;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
