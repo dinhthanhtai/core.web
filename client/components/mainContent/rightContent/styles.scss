@@ -27,8 +27,10 @@
   &__card {
     border: 1px solid gray;
     padding: 1rem;
+    border-radius: 3px;
 
     &--image {
+      width: 100%;
     }
     &--paragraph {
       margin-top: 1rem;

@@ -10,7 +10,7 @@ import "./styles.scss";
 
 const Layout = () => {
   return (
-    <div className='root'>
+    <>
       <Header />
       <main>
         <Information />
@@ -18,7 +18,7 @@ const Layout = () => {
         <MainContent />
       </main>
       <Footer />
-    </div>
+    </>
   )
 }
 

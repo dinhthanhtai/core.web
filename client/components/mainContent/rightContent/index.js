@@ -17,7 +17,11 @@ export const RightContent = () => {
     <div className='rightContent'>
       <Heading type='h2' className='rightContent__title'>Select a donation amount</Heading>
       <div className='rightContent__card'>
-        <img alt='loading...' className='rightContent__card--image' src='' />
+        <img 
+          alt='loading...' 
+          className='rightContent__card--image' 
+          src='https://img.freepik.com/free-vector/charity-doodle-vector-people-donating-things_53876-126415.jpg?size=626&ext=jpg&ga=GA1.2.1518270500.1633132800' 
+        />
         <p className='rightContent__card--paragraph'>
           {mockData.content}
         </p>
