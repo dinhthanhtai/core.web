@@ -1,0 +1,42 @@
+.navigate__menu {
+  list-style: none;
+  display: flex;
+  order: 3;
+  justify-content: center;
+  height: 2rem;
+
+  /*Tablet nhỏ(480 x 640)*/
+  @media screen and (min-width: 480px) {
+    justify-content: space-around;
+    height: 2rem;
+  }
+  /*Ipad dọc(768 x 1024)*/
+  @media screen and (min-width: 768px) {
+    li {
+      font-size: 1.2rem;
+    }
+  }
+  /*Ipad ngang(1024 x 768)*/
+  @media screen and (min-width: 1024px) {
+    order: 0;
+    align-items: center;
+    li {
+      font-size: 1.4rem;
+    }
+  }
+
+  &--item {
+    text-transform: uppercase;
+    margin-right: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: gray;
+    cursor: pointer;
+
+    @media screen and (min-width: 1024px) {
+      &:not(:last-child) {
+        margin-right: 4rem;
+      }
+    }
+  }
+}

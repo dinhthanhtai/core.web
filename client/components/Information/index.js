@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { FaShareAlt, FaEllipsisV } from 'react-icons/fa';
+import Avatar from '../avatarDefault';
+import Button from '../button';
 
 import './styles.scss';
 
@@ -8,47 +10,50 @@ export const Information = () => {
 
   return (
     <div className='info'>
-      <div className='info_left'>
-        <img className='info_left-avatar' alt='loading....' />
-        <div className='info_left-text'> Individual </div>
-        <div className='info_left-name'> Tim Kennedy </div>
-        <div className='info_left-prize'> 
+      <div className='info__left'>
+        <Avatar className='info__left--avatar' />
+        <div className='info__left--text'> Individual </div>
+        <div className='info__left--name'> Tim Kennedy </div>
+        <div className='info__left--prize'> 
           For <span> Big Freeze 6 </span> by <span> FightMND </span> 
         </div>
-        <div className='info_left-button'>
-          <button className='info_left-button-donate'> donate to individual </button>
-          <button className='info_left-button-square'> 
-            <FaShareAlt className='info_left-button-square-icon' />
-          </button>
-          <button onClick={() => setVisible(!visible)} className='info_left-button-square'> 
-            <FaEllipsisV className='info_left-button-square-icon' />
+        <div className='info__left--button'>
+          <Button type='md' backgroundColor> donate to individual </Button>
+          <Button 
+            type='sm' 
+            icon={<FaShareAlt />}
+          />
+          <Button 
+            onClick={() => setVisible(!visible)} 
+            type='sm' 
+            icon={<FaEllipsisV />}
+          >
             {
               visible && (
-                <ul className='info_left-popup'>
-                  <li className='info_left-popup-button'> Edit </li>
-                  <li className='info_left-popup-button'> Deactivate </li>
+                <ul className='info__left--popup'>
+                  <li className='info__left--popup--button'> Edit </li>
+                  <li className='info__left--popup--button'> Deactivate </li>
                 </ul>  
               )
             }
-          </button>
+          </Button>
         </div>
-       
       </div>
-      <div className='info_right'>
-        <div className='info_right-score'>
-          <div className='info_right-score-up'>
-            <div className='info_right-score-up-left info_right-score-up-text'>
+      <div className='info__right'>
+        <div className='info__right--score'>
+          <div className='info__right--score--up'>
+            <div className='info__right--score--up--left info__right--score--up--text'>
               Total Raised 
-              <div className='info_right-score-up-left-price'> $2.382.60 </div>
+              <div className='info__right--score--up--left--price'> $2.382.60 </div>
             </div>
-            <div className='info_right-score-up-right info_right-score-up-text'>
+            <div className='info__right--score--up--right info__right--score--up--text'>
               My goal
-              <div className='info_right-score-up-right-price'> $5,000 </div>
+              <div className='info__right--score--up--right--price'> $5,000 </div>
             </div>
           </div>
-          <div className='info_right-score-bottom'></div>
+          <div className='info__right--score--bottom'></div>
         </div>
-        <img alt='loading....' src='' />
+        <img alt='loading....' src='https://s1.favim.com/orig/151204/art-colors-draw-drawing-Favim.com-3700531.jpg' />
       </div>
     </div>
   )

@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 99999;
+  flex-direction: column;
+  border-bottom: 1px solid rgb(216, 213, 213);
+  justify-content: center;
+
+  /*Ipad ngang(1024 x 768)*/
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem 0 3rem;
+    border-bottom: 1px solid rgb(216, 213, 213);
+  }
+}

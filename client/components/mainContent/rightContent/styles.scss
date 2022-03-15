@@ -1,0 +1,109 @@
+.rightContent {
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 3px;
+
+  @media only screen and (min-width: 768px) {
+    margin-right: 3rem;
+    margin-top: 2rem;
+    height: fit-content;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    margin-right: 6rem;
+    margin-top: 2rem;
+    height: fit-content;
+  }
+
+  &__title {
+    font-size: 1rem;
+    margin: 1.5rem 0;
+  }
+  &__card {
+    border: 1px solid gray;
+    padding: 1rem;
+
+    &--image {
+    }
+    &--paragraph {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: gray;
+      @media screen and (min-width: 1024px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  &__amount {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &--card {
+      width: 5.5rem;
+      height: 5rem;
+      border: 1px solid gray;
+      border-radius: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin: 1.5rem 0;
+
+      &:not(:nth-child(4n)) {
+        margin-right: 1rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: 42%;
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid gray;
+        border-left: 1px solid gray;
+        overflow: hidden;
+        z-index: 12;
+        background-color: white;
+        transform: rotateZ(45deg);
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    border: 1px solid gray;
+    border-radius: 3px;
+    color: gray;
+  }
+
+  &__checkbox {
+    margin: 2rem 0;
+    align-self: baseline;
+    &--element {
+      margin-right: 0.5rem;
+    }
+
+    &--label {
+      margin-top: -0.5rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  .containerButton {
+    width: 100%;
+    button {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.amountCard {
+  width: 5.5rem;
+  height: 5rem;
+  border: 1px solid gray;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 1.5rem 0;
+
+  &:not(:nth-child(4n)) {
+    margin-right: 1rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 42%;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    overflow: hidden;
+    z-index: 12;
+    background-color: white;
+    transform: rotateZ(45deg);
+  }
+}

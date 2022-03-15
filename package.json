@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "@hot-loader/react-dom": "^17.0.2",
+    "classnames": "^2.3.1",
     "express": "^4.17.3",
     "react": "^17.0.2",
     "react-dom": "npm:@hot-loader/react-dom",

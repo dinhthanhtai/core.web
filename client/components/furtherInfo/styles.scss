@@ -1,0 +1,40 @@
+.furInfo {
+  &__card {
+    display: flex;
+    padding: 1rem;
+    border: 1px solid rgb(189, 186, 186);
+    border-radius: 3px;
+
+    &--image {
+      margin-right: 1rem;
+      width: 5rem;
+      height: 5rem;
+      @media screen and (min-width: 1024px) {
+        width: 7rem;
+        height: 7rem;
+      }
+    }
+    &--content {
+      &--title {
+        margin-bottom: 1rem;
+        @media screen and (min-width: 1024px) {
+          font-size: 1.4rem;
+        }
+      }
+
+      &--des {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+
+        @media screen and (min-width: 1024px) {
+          font-size: 1.4rem;
+        }
+      }
+
+      &--more {
+        color: rgb(38, 38, 221);
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

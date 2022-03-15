@@ -1,116 +1,12 @@
 .messageBoard {
-  &_title {
-    margin: 2rem 0;
-  }
-
-  &_form {
+  &__form {
     width: 100%;
     position: relative;
-
-    &-text {
-      width: 100%;
-      padding: 1rem;
-      font-size: 1rem;
-      background-color: rgb(252, 247, 247);
-      border: 1px solid rgb(221, 221, 221);
-      border-radius: 4px;
-      height: 10rem;
-
-      &:focus,
-      &:visited {
-        outline: none;
-      }
-    }
-    &-button {
-      position: absolute;
-      bottom: 1rem;
-      right: 1rem;
-      width: 2.5rem;
-      height: 2.5rem;
-      border: 1px solid rgb(179, 175, 175);
-      border-radius: 50%;
-      color: rgb(179, 175, 175);
-    }
   }
 
-  .timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: rgb(216, 211, 211);
-  }
-
-  /* The actual timeline (the vertical ruler) */
-  .timeline::after {
-    content: "";
-    position: absolute;
-    width: 3px;
-    background-color: gray;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    margin-left: -3px;
-  }
-
-  /* Container around content */
-  .container {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-  }
-
-  /* The circles on the timeline */
-  .container::after {
-    content: "";
-    position: absolute;
-    width: 2rem;
-    height: 1rem;
-    right: -15px;
-    background-color: blue;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-  }
-
-  /* Add arrows to the left container (pointing right) */
-  .left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-  }
-
-  /* Add arrows to the right container (pointing left) */
-  .right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-
-  /* Fix the circle for containers on the right side */
-  .right::after {
-    left: -16px;
-  }
-
-  /* The actual content */
-  .content {
-    padding: 20px 30px;
-    background-color: white;
-    position: relative;
-    border-radius: 6px;
+  &__button {
+    margin: 2rem 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
   }
 }

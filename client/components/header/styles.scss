@@ -5,12 +5,10 @@
   top: 0;
   background-color: white;
   z-index: 99999;
+  flex-direction: column;
+  border-bottom: 1px solid rgb(216, 213, 213);
+  justify-content: center;
 
-  /*Iphone(480 x 640)*/
-  @media screen and (min-width: 320px) {
-    flex-direction: column;
-    border-bottom: 1px solid rgb(216, 213, 213);
-  }
   /*Ipad ngang(1024 x 768)*/
   @media screen and (min-width: 1024px) {
     flex-direction: row;
@@ -20,18 +18,21 @@
     border-bottom: 1px solid rgb(216, 213, 213);
   }
 
-  &_logo {
-    /*Iphone(480 x 640)*/
-    @media screen and (min-width: 320px) {
-      width: 100%;
-      height: 5rem;
+  &__logo {
+    width: 5rem;
+    height: 7rem;
+    img {
+      margin: 0.5rem 0 0rem 1rem;
+      width: 80%;
+      height: 80%;
     }
-    /*Tablet nhỏ(480 x 640)*/
+
     @media screen and (min-width: 480px) {
-    }
-    /*Ipad dọc(768 x 1024)*/
-    @media screen and (min-width: 768px) {
-      height: 5.5rem;
+      img {
+        margin: 0.5rem 0 0rem 2rem;
+        width: 80%;
+        height: 80%;
+      }
     }
     /*Ipad ngang(1024 x 768)*/
     @media screen and (min-width: 1024px) {
@@ -39,20 +40,17 @@
     }
   }
 
-  &_menu {
+  &__menu {
     list-style: none;
     display: flex;
+    order: 3;
+    justify-content: center;
+    height: 2rem;
 
-    /*Iphone(480 x 640)*/
-    @media screen and (min-width: 320px) {
-      order: 3;
-      justify-content: center;
-      height: 3rem;
-    }
     /*Tablet nhỏ(480 x 640)*/
     @media screen and (min-width: 480px) {
       justify-content: space-around;
-      height: 3rem;
+      height: 2rem;
     }
     /*Ipad dọc(768 x 1024)*/
     @media screen and (min-width: 768px) {
@@ -69,7 +67,7 @@
       }
     }
 
-    &_item {
+    &--item {
       text-transform: uppercase;
       margin-right: 2rem;
       font-size: 1rem;
@@ -85,19 +83,18 @@
     }
   }
 
-  &_info {
+  &__info {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*Iphone(480 x 640)*/
-    @media screen and (min-width: 320px) {
-      order: 2;
-      position: fixed;
-      top: 1.5rem;
-      right: 2rem;
-    }
+    order: 2;
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+
     /*Tablet nhỏ(480 x 640)*/
     @media screen and (min-width: 480px) {
+      font-size: 1.2rem;
     }
     /*Ipad dọc(768 x 1024)*/
     @media screen and (min-width: 768px) {
@@ -111,12 +108,15 @@
       span {
         font-size: 1.4rem;
       }
+      margin-right: 2rem;
     }
 
-    &-name {
+    &--image {
+      width: 3rem;
+      height: 3rem;
       margin-right: 1rem;
     }
-    &-icon {
+    &--icon {
       transform: translateY(0.2rem);
     }
   }

@@ -1,0 +1,41 @@
+.cardInvolve {
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+  width: 50%;
+  max-width: 17.5rem;
+  border: 1px solid #80808045;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.4rem;
+
+  &__image {
+    width: 5rem;
+    height: 5rem;
+    margin: 1.5rem 0 0.5rem 0;
+  }
+
+  &__kind {
+    font-size: 1.3rem;
+    color: gray;
+    font-weight: 500;
+    margin: 0.5rem 0;
+  }
+  &__name {
+    font-weight: bold;
+  }
+  &__amount {
+    margin: 1.5rem 0;
+    color: rgb(0, 119, 255);
+    font-weight: bold;
+  }
+  &__detail {
+    text-align: center;
+    color: gray;
+    margin-bottom: 1rem;
+  }
+}

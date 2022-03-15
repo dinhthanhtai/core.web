@@ -2,13 +2,16 @@
   padding: 1rem;
   overflow-x: hidden;
 
-  &-title {
-    margin-bottom: 1rem;
-    font-weight: 600;
-    color: rgb(88, 86, 86);
+  @media screen and (min-width: 1024px) {
+    .headingContainer {
+      h2 {
+        font-size: 1.6rem;
+        margin-left: 5rem;
+      }
+    }
   }
 
-  &-board {
+  &__board {
     width: 90%;
     border: 1px solid gray;
     height: 10rem;
@@ -18,12 +21,12 @@
     align-items: center;
     border-radius: 4px;
 
-    &-title {
+    &--title {
       font-size: 1.4rem;
       margin-bottom: 1.5rem;
     }
 
-    &-price {
+    &--price {
       color: blue;
       font-weight: bold;
     }

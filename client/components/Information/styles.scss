@@ -1,16 +1,9 @@
 .info {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  margin: 2rem 1rem;
 
-  /*Iphone(480 x 640)*/
-  @media only screen and (min-width: 320px) {
-    flex-direction: column;
-    margin: 2rem 1rem;
-  }
-
-  /*Tablet nhỏ(480 x 640)*/
-  @media screen and (min-width: 480px) {
-  }
   /*Ipad dọc(768 x 1024)*/
   @media screen and (min-width: 768px) {
     margin: 2rem 3rem;
@@ -21,105 +14,88 @@
     flex-direction: row;
   }
 
-  &_left {
-    &-avatar {
-      width: 100rem;
-      height: 100rem;
+  &__left {
+    &--avatar {
+      width: 5rem;
+      height: 5rem;
       margin-bottom: 1rem;
       /*Iphone(480 x 640)*/
-      @media only screen and (min-width: 320px) {
+      @media only screen and (min-width: 480px) {
+        width: 7rem;
+        height: 7rem;
+      }
+
+      @media only screen and (min-width: 1024px) {
+        margin: 3rem 0 0 0;
       }
     }
-    &-text {
+    &--text {
       text-transform: uppercase;
       font-size: 1rem;
-      letter-spacing: 0.1rem;
+      letter-spacing: 0.15rem;
       color: gray;
-      margin-bottom: 1rem;
+      margin: 1.5rem 0;
     }
-    &-name {
+    &--name {
       color: black;
       font-size: 3rem;
       font-weight: bold;
-      margin-bottom: 1rem;
     }
-    &-prize {
+    &--prize {
       font-size: 1.8rem;
-      margin-bottom: 1rem;
+      margin: 1.5rem 0;
       span {
         color: rgb(26, 108, 231);
       }
     }
-    &-button {
+    &--button {
       display: flex;
       align-items: center;
 
-      button:not(:last-child) {
+      .containerButton:not(:last-child) {
         margin-right: 1rem;
       }
-
-      &-donate {
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        background-color: rgb(26, 108, 231);
-        color: white;
-        padding: 1rem 1.5rem;
-        border: 2px solid rgb(26, 108, 231);
-        font-weight: 400;
-        border-radius: 3px;
-      }
-      &-square {
-        position: relative;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        background-color: white;
-        font-size: 2rem;
-        color: rgb(26, 108, 231);
-        border: 2px solid rgb(26, 108, 231);
-
-        &-icon {
-          transform: translateY(0.2rem);
-        }
-      }
     }
-    &-popup {
+    &--popup {
       position: absolute;
       top: 0;
       right: 0;
       width: 10rem;
-      background-color: white;
       border: 1px solid rgb(214, 209, 209);
       border-radius: 3px;
       font-size: 1rem;
       text-align: left;
       color: black;
+      z-index: 10;
+      top: 4.5rem;
+      right: 0rem;
 
-      @media only screen and (min-width: 320px) {
-        top: 4.5rem;
-        right: 0rem;
-      }
-
-      &-button {
+      &--button {
         list-style: none;
         padding: 1rem 2rem;
+        background-color: white;
+
+        &:hover {
+          background-color: lightblue;
+        }
       }
     }
   }
-  &_right {
-    @media only screen and (min-width: 320px) {
-      margin-top: 2rem;
-      img {
-        display: none;
-      }
+  &__right {
+    margin-top: 2rem;
+    img {
+      // display: none;
+      width: 100%;
+      object-fit: cover;
+      margin: 1.5rem 0;
     }
-
     /*Ipad ngang(1024 x 768)*/
     @media screen and (min-width: 1024px) {
       position: relative;
       width: 50%;
     }
 
-    &-score {
+    &--score {
       width: 100%;
       background-color: rgb(245, 240, 240);
       border-radius: 4px;
@@ -128,37 +104,41 @@
       /*Ipad ngang(1024 x 768)*/
       @media screen and (min-width: 1024px) {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 7vw;
+        left: -10vw;
         width: 70%;
         max-width: 40rem;
       }
 
-      &-up {
+      &--up {
         display: flex;
         justify-content: space-between;
         padding: 0rem 2rem;
 
-        &-text {
+        &--text {
           font-weight: bold;
           font-size: 1rem;
+
+          @media screen and (min-width: 1024px) {
+            font-size: 1.4rem;
+          }
         }
 
-        &-left {
-          &-price {
+        &--left {
+          &--price {
             font-size: 1.5rem;
             margin-top: 0.5rem;
           }
         }
-        &-right {
-          &-price {
+        &--right {
+          &--price {
             font-size: 1.5rem;
             margin-top: 0.5rem;
           }
         }
       }
 
-      &-bottom {
+      &--bottom {
         width: 90%;
         padding: 0.8rem;
         margin: auto;

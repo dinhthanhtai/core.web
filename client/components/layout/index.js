@@ -8,7 +8,7 @@ import { Footer } from '../footer';
 
 import "./styles.scss";
 
-const HelloWorld = () => {
+const Layout = () => {
   return (
     <div className='root'>
       <Header />
@@ -22,4 +22,4 @@ const HelloWorld = () => {
   )
 }
 
-export default hot(module)(HelloWorld)
+export default hot(module)(Layout)

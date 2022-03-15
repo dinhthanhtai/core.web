@@ -1,0 +1,58 @@
+.information__logo {
+  width: 5rem;
+  height: 7rem;
+  img {
+    margin: 0.5rem 0 0rem 1rem;
+    width: 80%;
+    height: 80%;
+  }
+
+  @media screen and (min-width: 480px) {
+    img {
+      margin: 0.5rem 0 0rem 2rem;
+      width: 80%;
+      height: 80%;
+    }
+  }
+  /*Ipad ngang(1024 x 768)*/
+  @media screen and (min-width: 1024px) {
+    width: 10rem;
+  }
+}
+
+.information__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 2;
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+
+  /*Tablet nhỏ(480 x 640)*/
+  @media screen and (min-width: 480px) {
+    font-size: 1.2rem;
+  }
+  /*Ipad dọc(768 x 1024)*/
+  @media screen and (min-width: 768px) {
+    span {
+      font-size: 1.2rem;
+    }
+  }
+  /*Ipad ngang(1024 x 768)*/
+  @media screen and (min-width: 1024px) {
+    position: unset;
+    span {
+      font-size: 1.4rem;
+    }
+  }
+
+  &--image {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
+  &--icon {
+    transform: translateY(0.2rem);
+  }
+}

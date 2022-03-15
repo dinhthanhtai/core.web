@@ -1,0 +1,31 @@
+// COLOR VARIABLES
+$color-primary: white;
+
+$color-secondary: #101d2c;
+
+$color-tertiary: rgb(26, 108, 231);
+
+$color-gray-light-1: #f0f7f6;
+$color-gray-light-2: #aaa;
+
+// FONT VARIABLES
+$font-primary: "Open Sans", sans-serif;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% => 1 rem = 10px
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-gray-light-2;
+  font-weight: 300;
+}

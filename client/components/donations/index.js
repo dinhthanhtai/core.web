@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import Slider from "react-slick";
+import Heading from '../heading';
 
 import './styles.scss';
 
@@ -43,8 +44,6 @@ export const Donation = () => {
     width: window.innerWidth
   })
 
-  const numberSlideShow = useRef(1);
-
   const handleNumberSlide = (width) => {
     if(width >= 480 && width < 768) {
       return 2;
@@ -85,13 +84,13 @@ export const Donation = () => {
 
   return (
     <div className='donation'>
-      <h2 className='donation-title'>Latest donations</h2>
+      <Heading type='h2' > Latest donations </Heading>
       <Slider {...settings}>
         {
           mockData.map((item, idx) => (
-            <div key={item.name} className='donation-board'>
-              <h3 className='donation-board-title'> {item.name} </h3>
-              <h3 className='donation-board-price'> {item.price} </h3>
+            <div key={item.name} className='donation__board'>
+              <h3 className='donation__board--title'> {item.name} </h3>
+              <h3 className='donation__board--price'> {item.price} </h3>
             </div>
           ))
         }

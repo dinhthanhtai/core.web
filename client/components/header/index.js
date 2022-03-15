@@ -1,21 +1,28 @@
 import React from 'react';
 import { FaAngleDown } from 'react-icons/fa';
+import Avatar from '../avatarDefault';
 
 import './styles.scss';
 
 export const Header = () => {
+
+  const listTitle = ['Explore', 'Products', 'About Us', 'Contact Us'];
+
   return (
     <header className='header'>
-      <div className='header_logo'> logo </div>
-      <ul className='header_menu'>
-        <li className='header_menu_item'> Explore </li>
-        <li className='header_menu_item'> Products </li>
-        <li className='header_menu_item'> About Us </li>
-        <li className='header_menu_item'> Contact Us </li>
+      <div className='header__logo'>
+        <Avatar />
+      </div>
+      <ul className='header__menu'>
+        {
+          listTitle.map((title, index) => (
+            <li key={index} className='header__menu--item'> {title} </li>
+          ))
+        }
       </ul>
-      <div className='header_info'>
-        <img src='#' className='header_info-name' />
-        <span> Christine <FaAngleDown className='header_info-icon' /> </span>
+      <div className='header__info'>
+        <Avatar className='header__info--image' />
+        <span> Christine <FaAngleDown className='header__info--icon' /> </span>
       </div>
     </header>
   )

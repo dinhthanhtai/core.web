@@ -7,11 +7,8 @@ footer {
     border-bottom: 1px solid rgb(219, 213, 213);
     margin-bottom: 1rem;
     padding: 1rem 0rem;
-    @media screen and (min-width: 320px) {
-      flex-direction: column;
-    }
-    @media screen and (min-width: 480px) {
-    }
+    flex-direction: column;
+
     @media screen and (min-width: 768px) {
       flex-direction: row;
       padding: 1rem 3rem;
@@ -20,15 +17,20 @@ footer {
       padding: 1rem 6rem;
     }
 
-    &_logo {
+    &__logo {
       margin-bottom: 1.5rem;
+      width: 5rem;
+      height: 5rem;
+      @media screen and (min-width: 768px) {
+        margin-bottom: 0;
+      }
     }
 
-    &_icons {
+    &__icons {
       display: flex;
     }
 
-    &_icon {
+    &__icon {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -45,7 +47,7 @@ footer {
       }
     }
 
-    &_icon:not(:last-child) {
+    &__icon:not(:last-child) {
       margin-right: 1.5rem;
 
       @media screen and (min-width: 480px) {
@@ -56,12 +58,9 @@ footer {
   .explore {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
-    @media only screen and (min-width: 320px) {
-      display: flex;
-      flex-direction: column;
-      margin-left: 1rem;
-    }
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
 
     @media screen and (min-width: 480px) {
       display: grid;
@@ -74,11 +73,9 @@ footer {
       margin-left: 5rem;
     }
 
-    &_nav {
-      @media only screen and (min-width: 320px) {
-        margin: 1rem 0;
-        font-size: 1.1rem;
-      }
+    &__nav {
+      margin: 1rem 0;
+      font-size: 1.1rem;
 
       @media screen and (min-width: 768px) {
         font-size: 1.2rem;
@@ -89,45 +86,38 @@ footer {
         font-size: 1.6rem;
       }
 
-      &-item {
+      &--item {
         list-style: none;
         display: flex;
         flex-direction: column;
-        @media only screen and (min-width: 320px) {
-          line-height: 2rem;
-        }
+        line-height: 2rem;
 
         @media screen and (min-width: 1024px) {
           line-height: 3rem;
         }
       }
 
-      &-link {
+      &--link {
         text-decoration: none;
         color: black;
       }
 
-      &-link:first-child {
+      &--link:first-child {
         font-weight: bold;
       }
     }
   }
 
   .explain {
-    &_text {
+    &__text {
       width: 100%;
       background: #8080801f;
       color: gray;
+      font-size: 1.2rem;
+      padding: 1rem 1rem;
 
-      /*Iphone(480 x 640)*/
-      @media only screen and (min-width: 320px) {
-        font-size: 0.8rem;
-        padding: 1rem 1rem;
-      }
-
-      /*Tablet nhỏ(480 x 640)*/
       @media screen and (min-width: 480px) {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
       }
       /*Ipad dọc(768 x 1024)*/
       @media screen and (min-width: 768px) {
@@ -136,7 +126,7 @@ footer {
       }
       /*Ipad ngang(1024 x 768)*/
       @media screen and (min-width: 1024px) {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         padding: 2rem 6rem;
       }
     }
