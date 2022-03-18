@@ -10,7 +10,7 @@ export const Information = () => {
 
   return (
     <div className='info'>
-      <div className='info__left'>
+      <section className='info__left'>
         <Avatar className='info__left--avatar' />
         <div className='info__left--text'> Individual </div>
         <div className='info__left--name'> Tim Kennedy </div>
@@ -38,8 +38,8 @@ export const Information = () => {
             }
           </Button>
         </div>
-      </div>
-      <div className='info__right'>
+      </section>
+      <section className='info__right'>
         <div className='info__right--score'>
           <div className='info__right--score--up'>
             <div className='info__right--score--up--left info__right--score--up--text'>
@@ -54,7 +54,7 @@ export const Information = () => {
           <div className='info__right--score--bottom'></div>
         </div>
         <img alt='loading....' src='https://s1.favim.com/orig/151204/art-colors-draw-drawing-Favim.com-3700531.jpg' />
-      </div>
+      </section>
     </div>
   )
 }

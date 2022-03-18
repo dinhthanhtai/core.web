@@ -5,7 +5,7 @@ import './styles.scss';
 
 const Button = (props) => {
   const { 
-    children, type, onClick, className, 
+    children, type = 'md', onClick = () => {}, className, 
     icon, fontWeight, backgroundColor, color } = props;
   
   const btn = classNames(

@@ -27,7 +27,7 @@ export const MessageBoard = () => {
   return (
     <div className='messageBoard'>
       <Heading type='h2' > Message Board </Heading>
-      <form className='messageBoard__form' onSubmit=''>
+      <form className='messageBoard__form' onSubmit={() => {}}>
         <TextArea value='Leave a message of support...' />
       </form>
       {

@@ -16,5 +16,6 @@ const store = createStore(rootReducer)
 render(
   <Provider store={store}>
     <Layout />
+    {/* <Page /> */}
   </Provider>
 , document.getElementById('root'))

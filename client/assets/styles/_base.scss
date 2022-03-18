@@ -1,3 +1,4 @@
+// COLOR VARIABLES
 $color-primary: white;
 
 $color-secondary: #101d2c;
@@ -7,12 +8,15 @@ $color-tertiary: rgb(26, 108, 231);
 $color-gray-light-1: #f0f7f6;
 $color-gray-light-2: #aaa;
 
+// FONT VARIABLES
 $font-primary: "Open Sans", sans-serif;
 
-$bp-largest: 64rem;
-$bp-large: 48rem;
-$bp-medium: 30rem;
-$bp-large: 20rem;
+// Responsive Breakpoints
+
+$bp-largest: 64rem; // 1024 px
+$bp-large: 48rem; // 768 px
+$bp-medium: 30rem; // 480 px
+$bp-large: 20rem; // 320 px
 
 *,
 *::before,
@@ -24,10 +28,11 @@ $bp-large: 20rem;
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 62.5%; // 10px/16px = 62.5% => 1 rem = 10px
 }
 
 body {
   font-family: $font-primary;
+  // color: $color-gray-light-2;
   font-weight: 300;
 }

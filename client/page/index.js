@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './header';
-
+import { hot } from 'react-hot-loader';
 import './styles.scss';
 
 
@@ -12,4 +12,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default hot(module)(Page)

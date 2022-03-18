@@ -39,7 +39,7 @@ export const RightContent = () => {
       <Input className='rightContent__input' type='text' defaultValue='Enter a customer amount' />
       <div className='rightContent__checkbox'>
         <Input className='rightContent__checkbox--element' type="checkbox" id="donate-check" name="donate-check" />
-        <label className='rightContent__checkbox--label' for="donate-check"> Make this a monthly donation </label>
+        <label className='rightContent__checkbox--label' htmlFor="donate-check"> Make this a monthly donation </label>
       </div>
       <Button 
         type='md'  

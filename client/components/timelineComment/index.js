@@ -10,9 +10,9 @@ const TimeLineComment = (props) => {
 
   return (
     <div className='timeline'>
-      <div class="timeline">
-        <div class="container right">
-          <div class="content">
+      <div className="timeline">
+        <div className="container right">
+          <div className="content">
             <Heading type='h2'> {title} </Heading>
             <p> {content} </p>
           </div>
